@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bouncing ball in CSS</title> 
+    <meta name="description" content="Bouncing ball in CSS">
+    <meta name="keywords" content="bouncing ball CSS animated animation transition">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+		html{
+			background-image: url("bg.gif");
+	        font-family: Arial, Helvetica, sans-serif;
+		}
+        a,a:visited{
+            color: #0099cc;
+        }
+        a:hover{
+            color: #23527c;
+        }
+        .content{
+            background-color: white;
+            border: solid 1px silver;
+            padding: 10px 20px;
+        }
+
+		/* based off https://www.the-art-of-web.com/css/bouncing-ball-animation/ */
+
+		@keyframes travel {
+			from { 
+				left: 0;
+			}
+			to   { 
+				left: calc(100% - 50px);
+			}
+		}
+
+		@keyframes bounce {
+			from, to  {
+				bottom: 0;
+				animation-timing-function: ease-out;
+			}
+			50% {
+				bottom: 100%;
+				animation-timing-function: ease-in;
+			}
+		}
+
+		#traveler {
+			position: absolute;
+			width: 20px;
+			height: calc(100% - 50px);
+
+			animation-name: travel;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-duration: 3s;
+		}
+
+		#bouncer {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: #007bb2;
+
+			animation-name: bounce;
+			animation-iteration-count: infinite;
+			animation-duration: 2s;
+		}
+	</style>
+</head>
+
+<body> 
+    <div class="content">
+        <h1>Bouncing ball in CSS or <a href="index-javascript.html">JavaScript</a></h1>
+
+        <div id="traveler">
+            <div id="bouncer"></div>
+        </div>
+        <p>CSS animation for a bouncing ball (based on <a href="https://www.the-art-of-web.com/css/bouncing-ball-animation/" rel="noopener" target="_blank">article</a> from The Art of Web).</p>
+        <p>Code: <a href="https://github.com/evoluteur/bouncing-ball">bouncing-ball</a> at GitHub.</p>
+
+        <p><br/>&#169; 2020 <a href="https://evoluteur.github.io/">Olivier Giulieri</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "bouncing-ball",
+  "version": "1.0.0",
+  "description": "Bouncing ball using CSS or JavaScript.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/evoluteur/bouncing-ball.git"
+  },
+  "author": "Olivier Giulieri (https://evoluteur.github.io/)",
+  "copyright": "(c) 2020 Olivier Giulieri",
+  "license": "MIT",
+  "homepage": "https://evoluteur.github.io/bouncing-ball/",
+  "keywords": [
+    "bouncing",
+    "ball",
+    "animation",
+    "css",
+    "javascript"
+  ]
+}
