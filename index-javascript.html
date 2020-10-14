@@ -5,28 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bouncing ball in Javascript</title> 
     <meta name="description" content="Bouncing ball in Javascript">
-    <meta name="keywords" content="bouncing ball javascript animated animation transition">
+    <meta name="keywords" content="bouncing ball javascript animated animation transition fullscreen">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Overpass">
 	<style>
-		html{
-			background-image: url("bg.gif");
-            font-family: Arial, Helvetica, sans-serif;
-            color: #0d0d0d;
+        body {
+            padding: 10px 20px;
+            font-family: 'Overpass', serif;
+            font-size: 20px;
         }
+		html{
+            color: white;
+			background-color: #0288d1;
+		}
         a,a:visited{
-            color: #0099cc;
+            color: #ffb74d;
+            text-decoration: none;
         }
         a:hover{
-            color: #23527c;
+            color: #ffcc80;
+            text-decoration: underline;
         }
-        .content{
-            background-color: white;
-            border: solid 1px silver;
-            padding: 10px 20px;
-        }
+
 		#ball{
 			position: absolute;
-			background-color: #007bb2;
+			background-color: black;
 			height:50px;
 			width:50px;
 			border-radius: 50%;
@@ -74,10 +78,10 @@ function startBouncing(){
 
 <body onresize="setDim()" onload="startBouncing()"> 
     <div class="content">
-        <h1>Bouncing ball in Javascript or <a href="./">CSS</a></h1>
+        <h1>Bouncing ball in Javascript <a href="./">or CSS</a></h1>
     
         <p>Javascript animation for a bouncing ball.</p>
-        <p>Code: <a href="https://github.com/evoluteur/bouncing-ball">bouncing-ball</a> at GitHub.</p>
+        <p>Code: <a href="https://github.com/evoluteur/bouncing-ball">evoluteur/bouncing-ball</a> at GitHub.</p>
 
         <div id="ball"></div>
 
