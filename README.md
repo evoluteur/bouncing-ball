@@ -2,7 +2,7 @@
 
 Experiment on bouncing ball animations in Javascript or CSS.
 
-- [CSS Bouncing Ball](https://evoluteur.github.io/bouncing-ball/index.html)
+- [CSS Bouncing Ball](https://evoluteur.github.io/bouncing-ball/)
 
 - [Javascript Bouncing Ball](https://evoluteur.github.io/bouncing-ball/index-javascript.html)
 
