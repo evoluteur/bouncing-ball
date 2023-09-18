@@ -1,91 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Bouncing ball in Javascript</title> 
-    <meta name="description" content="Bouncing ball in Javascript">
-    <meta name="keywords" content="bouncing ball javascript animated animation transition fullscreen">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Overpass">
-	<style>
-        body {
-            padding: 10px 20px;
-            font-family: 'Overpass', serif;
-            font-size: 20px;
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bouncing ball in Javascript</title>
+    <meta name="description" content="Bouncing ball in Javascript" />
+    <meta
+      name="keywords"
+      content="bouncing ball javascript animated animation transition fullscreen"
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Overpass"
+    />
+    <link rel="stylesheet" href="bball.css" />
+    <meta
+      name="description"
+      content="Javascript animation for a bouncing ball."
+    />
+    <meta name="keywords" content="javascript animation bouncing ball" />
+    <script>
+      let x = 0,
+        y = 0,
+        maxX,
+        maxY,
+        upDown = 1,
+        leftRight = 1;
+
+      function setDim() {
+        maxX = window.innerWidth - 50;
+        if (x > maxX) {
+          x = maxX;
         }
-		html{
-            color: white;
-			background-color: #0288d1;
-		}
-        a,a:visited{
-            color: #ffb74d;
-            text-decoration: none;
+        maxY = window.innerHeight - 50;
+        if (y > maxY) {
+          y = maxY;
         }
-        a:hover{
-            color: #ffcc80;
-            text-decoration: underline;
+      }
+
+      function bounce() {
+        if (x > maxX || x < 0) {
+          leftRight = -leftRight;
         }
+        if (y > maxY || y < 0) {
+          upDown = -upDown;
+        }
+        x = x + 10 * leftRight;
+        y = y + 10 * upDown;
+        ball.style.top = y + "px";
+        ball.style.left = x + "px";
+      }
 
-		#ball{
-			position: absolute;
-			background-color: black;
-			height:50px;
-			width:50px;
-			border-radius: 50%;
-		}
-	</style>
-	<script>
-let x = 0,
-	y = 0,
-	maxX,
-	maxY,
-	upDown = 1,
-	leftRight = 1;
+      function startBouncing() {
+        setDim();
+        setInterval(bounce, 12);
+      }
+    </script>
+  </head>
 
-function setDim(){
-	maxX = window.innerWidth-50;
-	if(x>maxX){
-		x=maxX
-	}
-	maxY = window.innerHeight-50;
-	if(y>maxY){
-		y=maxY
-	}
-}
-
-function bounce(){
-	if(x>maxX || x<0){ 
-		leftRight=-leftRight
-	}
-	if(y>maxY || y<0){ 
-		upDown=-upDown
-	}
-	x = x+(10*leftRight)
-	y = y+(10*upDown)
-	ball.style.top = y + 'px'
-	ball.style.left = x + 'px'
-}
-
-function startBouncing(){
-	setDim()
-	setInterval(bounce, 12)
-}
-
-	</script>
-</head>
-
-<body onresize="setDim()" onload="startBouncing()"> 
+  <body onresize="setDim()" onload="startBouncing()">
     <div class="content">
-        <h1>Bouncing ball in Javascript <a href="./">or CSS</a></h1>
-    
-        <p>Javascript animation for a bouncing ball.</p>
-        <p>Code: <a href="https://github.com/evoluteur/bouncing-ball">evoluteur/bouncing-ball</a> at GitHub.</p>
+      <h1>Bouncing ball in Javascript <a href="./index.html">or CSS</a></h1>
 
-        <div id="ball"></div>
+      <p>Javascript animation for a bouncing ball.</p>
+      <p>
+        Code:
+        <a href="https://github.com/evoluteur/bouncing-ball"
+          >evoluteur/bouncing-ball</a
+        >
+        at GitHub.
+      </p>
 
-        <p><br/>&#169; 2020 <a href="https://evoluteur.github.io/">Olivier Giulieri</a></p>
+      <div id="ball"></div>
+
+      <p>
+        <br />&#169; 2020
+        <a href="https://evoluteur.github.io/">Olivier Giulieri</a>
+      </p>
     </div>
-</body>
+  </body>
 </html>

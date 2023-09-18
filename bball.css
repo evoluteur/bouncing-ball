@@ -1,0 +1,77 @@
+body {
+  padding: 10px 20px;
+  font-family: "Overpass", serif;
+  font-size: 20px;
+  scroll-behavior: smooth;
+}
+html {
+  color: white;
+  background: #0288d1 url("spirals.png");
+}
+a,
+a:visited {
+  color: #ffb74d;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffcc80;
+  text-decoration: underline;
+}
+
+/* Bouncing ball in CSS */
+/* based off https://www.the-art-of-web.com/css/bouncing-ball-animation/ */
+
+@keyframes travel {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 50px);
+  }
+}
+
+@keyframes bounce {
+  from,
+  to {
+    bottom: 0;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 100%;
+    animation-timing-function: ease-in;
+  }
+}
+
+#traveler {
+  position: absolute;
+  width: 20px;
+  height: calc(100% - 50px);
+
+  animation-name: travel;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 3s;
+}
+
+#bouncer {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+/* Bouncing ball in JS */
+
+#ball {
+  position: absolute;
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}

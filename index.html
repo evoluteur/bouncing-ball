@@ -1,93 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Bouncing ball in CSS</title> 
-    <meta name="description" content="Bouncing ball in CSS">
-    <meta name="keywords" content="bouncing ball CSS animated animation transition fullscreen">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Overpass">
-    <style>
-        body {
-            padding: 10px 20px;
-            font-family: 'Overpass', serif;
-            font-size: 20px;
-        }
-		html{
-            color: white;
-			background-color: #0288d1;
-		}
-        a,a:visited{
-            color: #ffb74d;
-            text-decoration: none;
-        }
-        a:hover{
-            color: #ffcc80;
-            text-decoration: underline;
-        }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bouncing ball in CSS</title>
+    <meta name="description" content="Bouncing ball in CSS" />
+    <meta
+      name="keywords"
+      content="bouncing ball CSS animated animation transition fullscreen"
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Overpass"
+    />
+    <link rel="stylesheet" href="bball.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta name="description" content="CSS animation for a bouncing ball." />
+    <meta name="keywords" content="css animation bouncing ball" />
+  </head>
 
-		/* based off https://www.the-art-of-web.com/css/bouncing-ball-animation/ */
-
-		@keyframes travel {
-			from { 
-				left: 0;
-			}
-			to   { 
-				left: calc(100% - 50px);
-			}
-		}
-
-		@keyframes bounce {
-			from, to  {
-				bottom: 0;
-				animation-timing-function: ease-out;
-			}
-			50% {
-				bottom: 100%;
-				animation-timing-function: ease-in;
-			}
-		}
-
-		#traveler {
-			position: absolute;
-			width: 20px;
-			height: calc(100% - 50px);
-
-			animation-name: travel;
-			animation-timing-function: linear;
-			animation-iteration-count: infinite;
-			animation-direction: alternate;
-			animation-duration: 3s;
-		}
-
-		#bouncer {
-			position: absolute;
-			width: 50px;
-			height: 50px;
-			border-radius: 50%;
-			background-color: black;
-
-			animation-name: bounce;
-			animation-iteration-count: infinite;
-			animation-duration: 2s;
-		}
-	</style>
-</head>
-
-<body> 
+  <body>
     <div class="content">
-        <div id="traveler">
-            <div id="bouncer"></div>
-        </div>
-        
-        <h1>Bouncing ball in CSS <a href="index-javascript.html">or JavaScript</a></h1>
+      <div id="traveler">
+        <div id="bouncer"></div>
+      </div>
 
-        <p>CSS animation for a bouncing ball (based on <a href="https://www.the-art-of-web.com/css/bouncing-ball-animation/" rel="noopener" target="_blank">article</a> from The Art of Web).</p>
-        <p>Code: <a href="https://github.com/evoluteur/bouncing-ball">evoluteur/bouncing-ball</a> at GitHub.</p>
+      <h1>
+        Bouncing ball in CSS <a href="index-javascript.html">or JavaScript</a>
+      </h1>
 
-        <p><br/>&#169; 2020 <a href="https://evoluteur.github.io/">Olivier Giulieri</a></p>
+      <p>
+        CSS animation for a bouncing ball (based on
+        <a
+          href="https://www.the-art-of-web.com/css/bouncing-ball-animation/"
+          rel="noopener"
+          target="_blank"
+          >article</a
+        >
+        from The Art of Web).
+      </p>
+      <p>
+        Code:
+        <a href="https://github.com/evoluteur/bouncing-ball"
+          >evoluteur/bouncing-ball</a
+        >
+        at GitHub.
+      </p>
+
+      <p>
+        <br />&#169; 2020
+        <a href="https://evoluteur.github.io/">Olivier Giulieri</a>
+      </p>
     </div>
-</body>
+  </body>
 </html>
