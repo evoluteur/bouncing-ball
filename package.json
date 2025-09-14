@@ -1,7 +1,7 @@
 {
   "name": "bouncing-ball",
   "version": "1.0.0",
-  "description": "Bouncing ball using CSS or JavaScript.",
+  "description": "Bouncing ball animation demo using CSS or JavaScript.",
   "repository": {
     "type": "git",
     "url": "git://github.com/evoluteur/bouncing-ball.git"
@@ -16,6 +16,7 @@
     "animation",
     "fullscreen",
     "css",
-    "javascript"
+    "javascript",
+    "keyframes"
   ]
 }
